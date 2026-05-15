@@ -1,4 +1,4 @@
-# Phage-Host Interaction Prediction — Paper 1 companion code
+# Leak-free Re-evaluation of Phage Host-range Prediction Benchmarks
 
 [![CI](https://github.com/OWNER/REPO/actions/workflows/test.yml/badge.svg)](https://github.com/OWNER/REPO/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)

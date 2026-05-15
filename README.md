@@ -252,12 +252,9 @@ please cite the journal version instead.
 ```bibtex
 @misc{inoshita2026phageleakfree,
   title         = {Leak-free Re-evaluation of Phage Host-range Prediction Benchmarks},
-  author        = {Inoshita, Keito and Tanaka, Tomoki},
+  author        = {Inoshita, Keito and Tanaka, Tomoki and Okano, Kenji and Iwaki, Hiroaki},
   year          = {2026},
-  eprint        = {ARXIV_ID},
   archivePrefix = {arXiv},
-  primaryClass  = {q-bio.GN},
-  note          = {Companion code: \url{https://github.com/OWNER/REPO}}
 }
 ```
 

@@ -1,0 +1,46 @@
+[project]
+name = "phage-host-paper1"
+version = "0.1.0"
+description = "Companion code for Paper 1 (leak-free phage-host benchmark on the Klebsiella PhageHostLearn corpus)."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+readme = "README.md"
+authors = [
+    {name = "Keito Inoshita", email = "inosita.2865@gmail.com"},
+]
+keywords = ["bacteriophage", "host-range-prediction", "leak-free-evaluation", "ESM-2", "Klebsiella"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "C4", "SIM"]
+# N803/N806 (non-lowercase X / X_train) is kept for scikit-learn API
+# compatibility where estimators accept (X, y) by convention.  E501
+# line-length is managed by the formatter rather than the linter.
+# E402 is silenced in the experiment scripts because they deliberately
+# call ``ensure_path()`` before importing from ``src`` so the scripts
+# can be executed directly without setting PYTHONPATH.
+ignore = ["E501", "N803", "N806"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*.py" = ["E402"]
+# The file name references the R package ``pROC`` as a proper noun, so we
+# exempt it from the lower-case module-name rule (N999).
+"tests/test_delong_vs_pROC.py" = ["N999"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

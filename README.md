@@ -274,10 +274,4 @@ this benchmark is built:
 }
 ```
 
-## Acknowledgements
 
-This work was conducted as part of the Phage--Host Benchmark research
-program. Computational resources were provided in part by the
-university GPU server for the ESM-2 650M embedding step. We thank the
-PhageHostLearn authors for releasing the upstream Zenodo dataset under
-an open license.
